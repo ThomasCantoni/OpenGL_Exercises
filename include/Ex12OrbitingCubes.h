@@ -27,16 +27,19 @@ private:
 
     //stormtrooper
     OGLProgram* StormProgram;
+    glm::vec3 StormTrupperPos;
     int VerticeCount;
     GLuint StormVao;
     GLuint StormVbo;
     OGLTexture* StormText;
+    
 private: //cubes
     OGLProgram* CubeProgram;
     int CubeVerticeCount,CubeCount;
     GLuint CubesVao;
     GLuint CubesVbo;
-    GLuint CubesEbo;
-    std::vector<CubeData> Cubes;
+    GLuint CubesVboMvp;
+    std::vector<CubeData> CubesTransforms;
+    std::vector<uint32_t> CubeIndices;
     std::vector<glm::mat4> MvpData;
 };

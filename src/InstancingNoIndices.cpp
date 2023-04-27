@@ -112,10 +112,8 @@ void InstancingNoIndices::Start()
     glGenVertexArrays(1, &CubeVao);
     glBindVertexArray(CubeVao);
     
-   
     glGenBuffers(1, &CubeVbo);
     glBindBuffer(GL_ARRAY_BUFFER, CubeVbo);
-   
     int CubeDataSize = IndexedCubeVertices.size() * sizeof(float);
     glBufferData(GL_ARRAY_BUFFER, CubeDataSize, IndexedCubeVertices.data(), GL_STATIC_DRAW);
 
@@ -174,7 +172,7 @@ void InstancingNoIndices::Update(float InDeltaTime)
         glm::mat4 Model = glm::mat4(1.f);
         Model = glm::translate(Model, CubesTransforms[i].Position);
         Model = glm::rotate(Model, glm::radians(ElapsedTime*50.0f), glm::vec3(0, 1, 0));
-        Model = glm::scale(Model, CubesTransforms[i].Scale);
+        //Model = glm::scale(Model, CubesTransforms[i].Scale);
         glm::mat4 Mvp = CameraProjection * CameraView * Model;
 
         MvpData[i] = Mvp;

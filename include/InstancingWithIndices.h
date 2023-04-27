@@ -31,8 +31,6 @@ private: //cubes
     GLuint CubeVboMvp;
     cubedata_t Cube;
     std::vector<uint32_t> CubeIndices;
-
     std::vector<cubedata_t> CubesTransforms;
-
     std::vector<glm::mat4> MvpData;
 };

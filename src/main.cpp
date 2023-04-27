@@ -15,6 +15,9 @@
 #include "Ex10Exercise.h"
 #include "Ex11Cubelight.h"
 #include "Ex12OrbitingCubes.h"
+#include "InstancingWithIndices.h"
+#include "InstancingNoIndices.h"
+
 
 #ifdef _WIN32
 extern "C" {
@@ -44,6 +47,8 @@ int main() {
 	//Ex10Exercise Scene;
 	//Ex11Cubelight Scene;
 	Ex12OrbitingCubes Scene;
+	//InstancingWithIndices Scene;
+	//InstancingNoIndices Scene;
 
 	Scene.Start();
 

@@ -14,8 +14,6 @@ class InstancingNoIndices
 public:
     void Start();
     void Update(float InDeltaTime);
- 
-
     void Destroy();
 
 private: 
@@ -32,6 +30,7 @@ private: //cubes
     GLuint CubeVbo;
     GLuint CubeVboMvp;
     cubedata_t Cube;
+    
     std::vector<cubedata_t> CubesTransforms;
     std::vector<glm::mat4> MvpData;
 };
