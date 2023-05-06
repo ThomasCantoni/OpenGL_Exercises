@@ -107,7 +107,9 @@ void OGLProgram::SetUniform(const std::string& name, const Color& color) {
 void OGLProgram::SetUniform(const std::string& name, float value) {
        glUniform1f(glGetUniformLocation(ID(), name.c_str()), value);
 }
-
+void OGLProgram::SetUniform(const std::string& name, int value) {
+       glUniform1i(glGetUniformLocation(ID(), name.c_str()), value);
+}
 void OGLProgram::SetUniform(const std::string& name, glm::mat4 matrix) 
 {
     glUniformMatrix4fv(glGetUniformLocation(ID(), name.c_str()), 1, GL_FALSE, &matrix[0][0]);

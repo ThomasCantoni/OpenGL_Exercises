@@ -3,20 +3,26 @@
 #include <iostream>
 #include <format>
 #include "OGLWindow.h"
-#include "Ex01TriangleDraw.h"
-#include "Ex02QuadDraw.h"
-#include "Ex03QuadIndexDraw.h"
-#include "Ex04QuadColor.h"
-#include "Ex05QuadTextureDraw.h"
-#include "Ex06QuadPerspDraw.h"
-#include "Ex07CubePerspDraw.h"
-#include "Ex08PhongDraw.h"
-#include "Ex09InstancingDraw.h"
-#include "Ex10Exercise.h"
-#include "Ex11Cubelight.h"
-#include "Ex12OrbitingCubes.h"
-#include "InstancingWithIndices.h"
-#include "InstancingNoIndices.h"
+//#include "Ex01TriangleDraw.h"
+//#include "Ex02QuadDraw.h"
+//#include "Ex03QuadIndexDraw.h"
+//#include "Ex04QuadColor.h"
+//#include "Ex05QuadTextureDraw.h"
+//#include "Ex06QuadPerspDraw.h"
+//#include "Ex07CubePerspDraw.h"
+//#include "Ex08PhongDraw.h"
+//#include "Ex09InstancingDraw.h"
+//#include "Ex10Exercise.h"
+//#include "Ex11Cubelight.h"
+//#include "Ex12OrbitingCubes.h"
+//#include "InstancingWithIndices.h"
+//#include "InstancingNoIndices.h"
+//#include "Ex13PhongContributions.h"
+#include "Ex14ManyLightsFORWARD.h"
+#include "Ex14ManyLightsDEFERRED.h"
+
+
+
 
 
 #ifdef _WIN32
@@ -46,12 +52,16 @@ int main() {
 	//Ex09InstancingDraw Scene;
 	//Ex10Exercise Scene;
 	//Ex11Cubelight Scene;
-	Ex12OrbitingCubes Scene;
+	//Ex12OrbitingCubes Scene;
 	//InstancingWithIndices Scene;
 	//InstancingNoIndices Scene;
+	//Ex13PhongContributions Scene;
+	//Ex14ManyLightsFORWARD Scene;
+	Ex14ManyLightsDEFERRED Scene;
 
 	Scene.Start();
 
+	glfwSwapInterval(0); //DISABLE VSYNC
 	while(Win.IsOpened()) 
 	{
 		float DeltaTime = Win.GetDeltaTime();
